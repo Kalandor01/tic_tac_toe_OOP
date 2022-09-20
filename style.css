@@ -5,7 +5,7 @@
 
 article, header, footer {
     margin: auto;
-    max-width: 600px;
+    max-width: 400px;
     width: 80%;
 }
 
@@ -19,7 +19,20 @@ footer {
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.3);
 }
 
-#playerNames, #infoBox, #winBox {
+.cell {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.cell>p {
+    margin: 5px;
+}
+
+#playerNames, #infoBox, #winBox, #field {
     margin: 10px;
     padding: 5px;
 }
@@ -31,4 +44,10 @@ footer {
 
 #winBox {
     color: rgb(145, 0, 145);
+}
+
+#field {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
 }
