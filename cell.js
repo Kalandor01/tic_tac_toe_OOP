@@ -3,6 +3,7 @@ class Cell {
     #cellElem
     #pElem
     #pos
+    #symbol
 
     constructor(parrentElem, pos=0) {
         const elem = '<div class="cell"><p></p></div>';
@@ -10,18 +11,23 @@ class Cell {
         this.#cellElem = parrentElem.children(".cell:last-child");
         this.#pElem = this.#cellElem.children("p:last-child");
         this.#pos = pos;
-        this.symbol = -1;
+        this.#symbol = -1;
+        this.#cellElem.off("click");
         this.#cellElem.on("click", ()=> {
             this.onClick();
         })
     }
 
     setSymbol(symbol) {
-        if(this.symbol == -1 && symbol != -1) {
-            this.symbol = symbol;
-            this.#pElem.text(this.symbol?"X":"O");
+        if(this.#symbol == -1 && symbol != -1) {
+            this.#symbol = symbol;
+            this.#pElem.text(this.#symbol?"X":"O");
             this.#cellElem.off("click");
         }
+    }
+
+    getSymbol() {
+        return this.#symbol;
     }
 
     onClick() {

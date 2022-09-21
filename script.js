@@ -10,7 +10,14 @@ function resize() {
     $(".cell").css("font-size", `${$(".cell").width()}px`);
 }
 
-$(function() {
-    new Field();
+var field;
+
+function newGame() {
+    field = new Field();
     resize();
+}
+
+$(function() {
+    $("#newGameButton").on("click", newGame);
+    newGame();
 })
