@@ -1,5 +1,5 @@
-import Cell from "../tic_tac_toe_OOP/cell.js"
-import Info from "../tic_tac_toe_OOP/info.js"
+import Cell from "../../cell.js"
+import Info from "../../info.js"
 
 class Field {
     #fieldElem

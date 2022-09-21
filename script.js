@@ -1,4 +1,4 @@
-import Field from "../tic_tac_toe_OOP/field.js";
+import Field from "../../field.js";
 
 $(window).resize(function() {
     resize();
