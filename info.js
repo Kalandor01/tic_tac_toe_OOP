@@ -39,7 +39,7 @@ class Info {
         if(state == -1)
             this.#infoBoxP.text("VÉGE");
         else
-            this.#infoBoxP.text(`${state?"X":"O"} játékos következik`);
+            this.#infoBoxP.text(`${state?this.#xPlayerName:this.#oPlayerName} játékos következik`);
     }
 
     setWinBox(state=-1, turns=0) {
